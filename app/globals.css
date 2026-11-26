@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --bg: #111111; --surface-1: #191919; --surface-2: #222222; --surface-3: #292929;
+  --text: #FFFFFF; --text-muted: #A0A0A0; --border: #2A2A2A;
+}
+html.light {
+  --bg: #FAFAF7; --surface-1: #FFFFFF; --surface-2: #F3F3EE; --surface-3: #EDEDE6;
+  --text: #111111; --text-muted: #6B6B6B; --border: #E2E2DA;
+}
+html, body { background: var(--bg); color: var(--text); }
+body { font-family: var(--font-body), system-ui, sans-serif; overflow-x: hidden; }
+* { -webkit-tap-highlight-color: transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--surface-3); border-radius: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+.slider { -webkit-appearance: none; appearance: none; height: 4px; background: var(--surface-3); border-radius: 2px; cursor: pointer; }
+.slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; height: 12px; width: 12px; border-radius: 50%; background: #D4FF48; border: 2px solid #111; }
+.slider::-moz-range-thumb { height: 12px; width: 12px; border-radius: 50%; background: #D4FF48; border: 2px solid #111; }
+.focus-ring:focus-visible { outline: 2px solid #D4FF48; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
